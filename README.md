@@ -1,7 +1,4 @@
-# BigDataProject
-
-
-### README.md for AeroPredict
+## README.md
 
 ---
 
