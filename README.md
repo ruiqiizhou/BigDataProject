@@ -49,6 +49,28 @@ The model utilizes a detailed dataset from Kaggle, which includes extensive flig
 - [Addressed] Address dataset imbalance through more sophisticated sampling techniques.
 - Enhance cloud integration for scalable model training and deployment.
 
+### Steps to follow to fully replicate the results:
+
+- Download the data on Kaggle: [FlightQuest2DataRelease2_AggregateTrain](https://www.kaggle.com/competitions/flight2-main/data?select=FQ2DataRelease2_AggregateTrain.zip)
+- Upload four data on Google Cloud Storage Bucket:
+  1. training2_asdiflightplan.csv (1.57 GB, 11 columns)
+  2. training2_fdwind.csv (5.4 MB, 5 columns)
+  3. training2_fdwindairport.csv (60 KB, 3 columns)
+  4. training2_flighthistory.csv (190 MB, 26 columns)
+- Setup Google Cloud Cluster in the following steps:
+  0. Choose the project you create that you put above data in
+  1. Click CREATE CLUSTER -> choose Cluster on Compute Engine -> click CREATE
+  2. On Set up cluster page:
+       1. choose Cluster type-Single Node;
+       2. Versioning-2.0 Ubuntu (at the bottom);
+       3. Dataproc Metastore-select the project name for this project;
+       4. Components-check the Enable component gateway;
+       5. Optional components-check Jupyter Notebook
+       6. Click CREATE
+- Download [32_write_encoded_data_as_csv.ipynb](https://github.com/ruiqiizhou/BigDataProject/blob/main/32_write_encoded_data_as_csv.ipynb) and run the whole notebook (change the Google Cloud Bucket path to your path)
+- Download [42_final_modleing_milestone4.ipynb](https://github.com/ruiqiizhou/BigDataProject/blob/main/42_final_modleing_milestone4.ipynb) and run the whole notebook (change the Google Cloud Bucket path to your path)
+
+
 ### Contributing
 
 We welcome contributions from the community. Please refer to the CONTRIBUTING.md file for more details on how to submit pull requests or issues.
@@ -56,7 +78,11 @@ We welcome contributions from the community. Please refer to the CONTRIBUTING.md
 
 ### Support
 
-For support, email ruiqizhou@vanderbilt.edu or open an issue in the GitHub repository.
+For support, email 
+- ruiqizhou@vanderbilt.edu
+- jiaying.liang@vanderbilt.edu
+- ningyi.han@vanderbilt.edu
+or open an issue in the GitHub repository.
 
 ---
 
