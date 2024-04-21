@@ -1,7 +1,5 @@
 ## README.md
 
----
-
 #### AeroPredict: Spark-Powered Flight Delay Forecasting
 
 AeroPredict is a cutting-edge predictive model designed to accurately forecast flight delays, facilitating better decision-making for airlines and passengers alike. By leveraging extensive datasets and advanced machine learning algorithms, AeroPredict aims to minimize the inconvenience and financial losses typically associated with flight delays in the aviation industry.
@@ -20,7 +18,11 @@ Develop models to predict flight delays using historical data, helping airlines 
 This project is intended to reduce the negative impacts of flight delays by providing early predictions, thus allowing for better resource management and planning in the aviation industry.
 
 **Data Foundation:**
-The model utilizes a detailed dataset from Kaggle, which includes extensive flight records and features necessary for comprehensive analysis.
+The model utilizes a detailed dataset from Kaggle, which includes extensive flight records and features necessary for comprehensive analysis.  
+
+**Data for modeling**: 
+* No delayed ("Delay" = 0) [26659 rows];
+* Delayed ("Delay" = 1) [26657 rows]
 
 
 ### Models Used
@@ -44,7 +46,7 @@ The model utilizes a detailed dataset from Kaggle, which includes extensive flig
 
 ### Future Work
 
-- Address dataset imbalance through more sophisticated sampling techniques.
+- [Addressed] Address dataset imbalance through more sophisticated sampling techniques.
 - Enhance cloud integration for scalable model training and deployment.
 
 ### Contributing
